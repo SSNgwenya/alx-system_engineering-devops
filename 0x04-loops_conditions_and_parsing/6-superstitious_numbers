@@ -12,13 +12,16 @@ count=1
 while [ "$count" -le 20 ]; do
     case "$count" in
         4)
-            echo "$count: Bad luck from China"
+            echo "$count"
+	    echo "Bad luck from China"
             ;;
         9)
-            echo "$count: Bad luck from Japan"
+            echo "$count"
+	    echo "Bad luck from Japan"
             ;;
         17)
-            echo "$count: Bad luck from Italy"
+            echo "$count"
+	    echo "Bad luck from Italy"
             ;;
         *)
             echo "$count"
