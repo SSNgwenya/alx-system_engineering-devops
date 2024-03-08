@@ -1,10 +1,13 @@
 #!/usr/bin/env ruby
 
-# Capture the input argument
-input = ARGV[0]
+# Check if an argument is provided
+if ARGV.empty?
+  puts "Usage: #{$PROGRAM_NAME} <input_string>"
+  exit 1
+end
 
-# Use regular expression to match occurrences of "School"
-matches = input.scan(/School/)
+# Apply the regular expression to the input argument
+matches = ARGV[0].scan(/School/).join
 
-# Print the matched results
-puts matches.join
+# Output the matched result
+puts matches
