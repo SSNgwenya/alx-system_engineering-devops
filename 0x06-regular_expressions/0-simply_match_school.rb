@@ -1,14 +1,10 @@
 #!/usr/bin/env ruby
 
-# Get the input argument
+# Capture the input argument
 input = ARGV[0]
 
-# Define the regular expression pattern
-pattern = /School/
+# Use regular expression to match occurrences of "School"
+matches = input.scan(/School/)
 
-# Match the input against the pattern
-if input.match?(pattern)
-  puts "School"
-else
-  puts ""
-end
+# Print the matched results
+puts matches.join
