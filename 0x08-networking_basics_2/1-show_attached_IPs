@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Displays all active IPv4 addresses on the machine (excluding loopback)
+
+
+ip -4 addr show scope global | awk '!/^[0-9]*: ?lo|link\\/ether/ {print $2}'
