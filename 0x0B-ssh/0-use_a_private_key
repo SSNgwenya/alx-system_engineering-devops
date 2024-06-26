@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 #connecting to server using ssh
 
 # Define the server address
