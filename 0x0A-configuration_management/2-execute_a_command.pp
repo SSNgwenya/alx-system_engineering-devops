@@ -1,6 +1,5 @@
-# Execute a command
+# Execute a command with puppet
 
-exec {'pkill killmenow':
-	path	=> '/usr/bin:/usr/sbin:/bin'
+exec {'pkill -f killmenow':
+  path	=> '/usr/bin:/usr/local/bin/:/bin/',
 }
-
