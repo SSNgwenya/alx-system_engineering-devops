@@ -5,5 +5,14 @@
 
 apt-get update -y
 apt-get install -y nginx
-sudo service nginx enable
-sudo service nginx start
+systemctl enable nginx
+systemctl start nginx
+ufw allow 80/tcp
+nginx -t
+systemctl restart nginx
+if ! ss -tuln | grep ':80'; then
+    echo "Nginx is not listening on port 80"
+    exit 1
+else
+    echo "Nginx is listening on port 80"
+fi
